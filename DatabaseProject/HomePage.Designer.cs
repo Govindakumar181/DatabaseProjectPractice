@@ -1,6 +1,6 @@
 ﻿namespace DatabaseProject
 {
-    partial class Form1
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // HomePage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(801, 524);
+            this.Name = "HomePage";
+            this.Text = "HomePage";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
