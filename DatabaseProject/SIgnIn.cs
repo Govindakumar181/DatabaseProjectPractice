@@ -57,10 +57,6 @@ namespace DatabaseProject
             }
             else
             {
-                //SqlCommand sqlCommand = new SqlCommand("select Email,Password from Users where Email = @userEmail && Password = @userPassword");
-                //sqlCommand.Parameters.AddWithValue("@userEmail", userEmail);
-                //sqlCommand.Parameters.AddWithValue("@userPassword", userPassword);
-                //int row = objDBAccess.executeQuery(sqlCommand);
 
                 string query = "Select * from Users where Email = '" + userEmail + "' AND Password = '" + userPassword + "'";
 

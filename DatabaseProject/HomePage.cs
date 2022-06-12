@@ -90,5 +90,36 @@ namespace DatabaseProject
             }
 
         }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Are you sure you", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialog == DialogResult.Yes)
+            {
+
+
+                string query = "Delete from Users where ID = '" + SignIn.id + "'";
+                SqlCommand deleteQuery = new SqlCommand(query);
+
+                int rows = objDbAccess.executeQuery(deleteQuery);
+
+
+                if (rows == 1)
+                {
+                    MessageBox.Show("Account Deleted Successfully");
+
+                    this.Hide();
+                    SignIn logIn = new SignIn();
+                    logIn.Show();
+                }
+
+                else
+                {
+                    MessageBox.Show("Delete Failed");
+                }
+            }
+
+        }
     }
 }

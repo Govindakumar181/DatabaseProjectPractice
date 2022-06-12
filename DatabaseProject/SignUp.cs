@@ -47,7 +47,7 @@ namespace DatabaseProject
             }
             else
             {
-                //MessageBox.Show("Alright");
+                
                 SqlCommand insertQuery = new SqlCommand("insert into Users(Name,Email,Password,Country) values(@userName,@userEmail,@userPassword,@userCountry)");
 
                 insertQuery.Parameters.AddWithValue("@userName",userName);
