@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace DatabaseProject
@@ -16,6 +15,27 @@ namespace DatabaseProject
     {
         DBAccess objDBAccess = new DBAccess();
         DataTable dtUsers = new DataTable();
+
+        public static string id, name, email, password,country;
+
+        //private void InitializeMyControl()
+        //{
+        //    // Set to no text.
+        //    txtPasswordLogin.Text = "";
+        //    // The password character is an asterisk.
+        //    txtPasswordLogin.PasswordChar = '*';
+        //    // The control will allow no more than 14 characters.
+            
+        //}
+
+
+        private void lblCreateAccount_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUp signUp = new SignUp();
+            signUp.Show();
+
+        }
 
         public SignIn()
         {
@@ -48,7 +68,16 @@ namespace DatabaseProject
 
                 if(dtUsers.Rows.Count==1)
                 {
-                    MessageBox.Show("Logined Successfully");
+
+                    id = dtUsers.Rows[0]["ID"].ToString();
+                    name = dtUsers.Rows[0]["Name"].ToString();
+                    email = dtUsers.Rows[0]["Email"].ToString();
+                    password = dtUsers.Rows[0]["Password"].ToString();
+                    country = dtUsers.Rows[0]["Country"].ToString();
+
+
+
+                    MessageBox.Show("Logged In Successfully");
                     this.Hide();
                     HomePage home = new HomePage();
                     home.Show();

@@ -16,5 +16,18 @@ namespace DatabaseProject
         {
             InitializeComponent();
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+
+            lblWelcomeTitle.Text = "Welcome " + SignIn.name;
+
+            txtNameUpdate.Text = SignIn.name;
+            txtEmailUpdate.Text = SignIn.email;
+            txtPasswordUpdate.Text = SignIn.password;
+            txtCountryUpdate.Text = SignIn.country;
+            
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.txtPasswordLogin = new System.Windows.Forms.TextBox();
             this.lblPasswordLogin = new System.Windows.Forms.Label();
             this.lblSignIn = new System.Windows.Forms.Label();
+            this.lblCreateAccount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -92,11 +93,23 @@
             this.lblSignIn.Text = "Login Form";
             this.lblSignIn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblCreateAccount
+            // 
+            this.lblCreateAccount.AutoSize = true;
+            this.lblCreateAccount.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblCreateAccount.Location = new System.Drawing.Point(382, 387);
+            this.lblCreateAccount.Name = "lblCreateAccount";
+            this.lblCreateAccount.Size = new System.Drawing.Size(247, 20);
+            this.lblCreateAccount.TabIndex = 18;
+            this.lblCreateAccount.Text = "Don\'t have Account? Create One.";
+            this.lblCreateAccount.Click += new System.EventHandler(this.lblCreateAccount_Click);
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 467);
+            this.Controls.Add(this.lblCreateAccount);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtEmailLogin);
             this.Controls.Add(this.lblEmailLogin);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.TextBox txtPasswordLogin;
         private System.Windows.Forms.Label lblPasswordLogin;
         private System.Windows.Forms.Label lblSignIn;
+        private System.Windows.Forms.Label lblCreateAccount;
     }
 }
