@@ -51,6 +51,7 @@
             this.btnUpdateAccount.TabIndex = 21;
             this.btnUpdateAccount.Text = "Update Account";
             this.btnUpdateAccount.UseVisualStyleBackColor = true;
+            this.btnUpdateAccount.Click += new System.EventHandler(this.btnUpdateAccount_Click);
             // 
             // txtCountryUpdate
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DatabaseProject
 {
@@ -16,6 +17,10 @@ namespace DatabaseProject
         {
             InitializeComponent();
         }
+
+       
+
+        DBAccess objDbAccess = new DBAccess();
 
         private void HomePage_Load(object sender, EventArgs e)
         {
@@ -28,6 +33,62 @@ namespace DatabaseProject
             txtPasswordUpdate.Text = SignIn.password;
             txtCountryUpdate.Text = SignIn.country;
             
+        }
+
+        private void btnUpdateAccount_Click(object sender, EventArgs e)
+        {
+
+            string newUserName = txtNameUpdate.Text;
+            string newPassword = txtPasswordUpdate.Text;
+            string newEmail = txtEmailUpdate.Text;
+            string newCountry = txtCountryUpdate.Text;
+
+            if(newUserName.Equals(""))
+            {
+                MessageBox.Show("Kindly Insert the UserName to Update.");
+            }
+            else if (newEmail.Equals(""))
+            {
+                MessageBox.Show("Kindly Insert the Email to Update.");
+            }
+            else if (newPassword.Equals(""))
+            {
+                MessageBox.Show("Kindly Insert the Password to Update.");
+            }
+            else if (newCountry.Equals(""))
+            {
+                MessageBox.Show("Kindly Insert the Country to Update.");
+            }
+            else
+            {
+
+                string query = "Update Users SET Name = '" + @newUserName + "', Password = '" + @newPassword + "', Email = '" + @newEmail + "', Country = '" + @newCountry + "' where ID = '" + SignIn.id + "'";
+
+                SqlCommand updateQuery = new SqlCommand(query);
+
+                int rows = objDbAccess.executeQuery(updateQuery);
+
+                updateQuery.Parameters.AddWithValue("@newUserName", @newUserName);
+                updateQuery.Parameters.AddWithValue("@newEmail", @newEmail);
+                updateQuery.Parameters.AddWithValue("@newPassword", @newPassword);
+                updateQuery.Parameters.AddWithValue("@newCountry", @newCountry);
+
+                if(rows==1)
+                {
+                    MessageBox.Show("Account Updated Successfully");
+
+                    this.Hide();
+                    SignIn logIn = new SignIn();
+                    logIn.Show();
+                }
+
+                else
+                {
+                    MessageBox.Show("Update Failed");
+                }
+
+            }
+
         }
     }
 }
