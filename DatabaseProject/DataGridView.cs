@@ -29,5 +29,13 @@ namespace DatabaseProject
             objDbAccess.closeConn();
 
         }
+
+        private void btnPerformOperation_Click(object sender, EventArgs e)
+        {
+            string query = "select * from Users";
+            int changes = objDbAccess.executeDataAdapter(dtTable,query);
+
+            MessageBox.Show("count = " + changes);
+        }
     }
 }

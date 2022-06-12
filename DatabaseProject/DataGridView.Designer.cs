@@ -36,27 +36,28 @@
             // btnPerformOperation
             // 
             this.btnPerformOperation.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerformOperation.Location = new System.Drawing.Point(538, 356);
+            this.btnPerformOperation.Location = new System.Drawing.Point(247, 356);
             this.btnPerformOperation.Name = "btnPerformOperation";
-            this.btnPerformOperation.Size = new System.Drawing.Size(209, 40);
+            this.btnPerformOperation.Size = new System.Drawing.Size(505, 40);
             this.btnPerformOperation.TabIndex = 0;
             this.btnPerformOperation.Text = "Perform Operations";
             this.btnPerformOperation.UseVisualStyleBackColor = true;
+            this.btnPerformOperation.Click += new System.EventHandler(this.btnPerformOperation_Click);
             // 
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(93, 25);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(132, 28);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowTemplate.Height = 28;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(1043, 313);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(753, 313);
             this.dataGridViewUsers.TabIndex = 1;
             // 
             // DataGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 421);
+            this.ClientSize = new System.Drawing.Size(1028, 421);
             this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.btnPerformOperation);
             this.Name = "DataGridView";
