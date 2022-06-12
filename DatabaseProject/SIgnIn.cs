@@ -15,7 +15,7 @@ namespace DatabaseProject
     public partial class SignIn : Form
     {
         DBAccess objDBAccess = new DBAccess();
-        DataTable dbtable = new DataTable();
+        DataTable dtUsers = new DataTable();
 
         public SignIn()
         {
@@ -44,9 +44,9 @@ namespace DatabaseProject
 
                 string query = "Select * from Users where Email = '" + userEmail + "' AND Password = '" + userPassword + "'";
 
-                objDBAccess.readDatathroughAdapter(query, dbtable);
+                objDBAccess.readDatathroughAdapter(query, dtUsers);
 
-                if(dbtable.Rows.Count==1)
+                if(dtUsers.Rows.Count==1)
                 {
                     MessageBox.Show("Logined Successfully");
                     this.Hide();
