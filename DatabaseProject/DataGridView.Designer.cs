@@ -30,6 +30,7 @@
         {
             this.btnPerformOperation = new System.Windows.Forms.Button();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.btnAPIGrid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +54,22 @@
             this.dataGridViewUsers.Size = new System.Drawing.Size(753, 313);
             this.dataGridViewUsers.TabIndex = 1;
             // 
+            // btnAPIGrid
+            // 
+            this.btnAPIGrid.Location = new System.Drawing.Point(823, 356);
+            this.btnAPIGrid.Name = "btnAPIGrid";
+            this.btnAPIGrid.Size = new System.Drawing.Size(157, 40);
+            this.btnAPIGrid.TabIndex = 2;
+            this.btnAPIGrid.Text = "API Grid";
+            this.btnAPIGrid.UseVisualStyleBackColor = true;
+            this.btnAPIGrid.Click += new System.EventHandler(this.btnAPIGrid_Click);
+            // 
             // DataGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 421);
+            this.Controls.Add(this.btnAPIGrid);
             this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.btnPerformOperation);
             this.Name = "DataGridView";
@@ -72,5 +84,6 @@
 
         private System.Windows.Forms.Button btnPerformOperation;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
+        private System.Windows.Forms.Button btnAPIGrid;
     }
 }

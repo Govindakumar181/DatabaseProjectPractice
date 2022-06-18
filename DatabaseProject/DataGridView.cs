@@ -37,5 +37,13 @@ namespace DatabaseProject
 
             MessageBox.Show("count = " + changes);
         }
+
+        private void btnAPIGrid_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DataGridViewFromAPI gridAPI = new DataGridViewFromAPI();
+
+            gridAPI.Show();
+        }
     }
 }

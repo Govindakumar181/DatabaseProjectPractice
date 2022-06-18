@@ -18,7 +18,9 @@ namespace DatabaseProject
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new SignUp());
             //Application.Run(new SignIn());
-            Application.Run(new DataGridView());
+            //Application.Run(new DataGridView());
+            Application.Run(new DataGridViewFromAPI());
+
         }
     }
 }
